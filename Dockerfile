@@ -1,4 +1,4 @@
-FROM python:3.4
+FROM python:3.5
 
 RUN apt-get update && apt-get install -y \
     libblas-dev \
@@ -29,7 +29,7 @@ COPY run_jupyter.sh /
 ENV TENSORFLOW_VERSION 0.12.1
 
 RUN pip --no-cache-dir install \
-    	https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-${TENSORFLOW_VERSION}-cp34-cp34m-linux_x86_64.whl
+    	https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-${TENSORFLOW_VERSION}-cp35-cp35m-linux_x86_64.whl
 
 # tensorboard
 EXPOSE 6006
